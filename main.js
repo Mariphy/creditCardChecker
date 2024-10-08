@@ -23,7 +23,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
 
-// Add your functions below:
+// Functions to validate credit cards:
 const validateCredit = arr => {
     let sumOfDigits = 0;
     for (let i = arr.length -2; i >= 0; i = i-2) {
@@ -36,7 +36,6 @@ const validateCredit = arr => {
     for (let j = arr.length -1; j >= 0; j = j-2){
       sumOfDigits = sumOfDigits + arr[j];
     }
-    //console.log(sumOfDigits);
     
     if (sumOfDigits % 10 === 0) {
       return true;
@@ -57,7 +56,6 @@ const findInvalidCards = nestedArr => {
 
 
 console.log(findInvalidCards(batch))
-//console.log(listOfInvalidCards)
 
 const idInvalidCompanies = nestedArr => {
   let listOfCompanies = [];
